@@ -1,10 +1,9 @@
 class Aula:
     def __init__(self, nombre_aula, numero_piso, numero_edificio, capacidad_asientos):
-        self.nombre_aula = nombre_aula
-        self.numero_piso = numero_piso
-        self.numero_edificio = numero_edificio
-        self.capacidad_asientos = capacidad_asientos
-
+        self.__nombre_aula = nombre_aula
+        self.__numero_piso = numero_piso
+        self.__numero_edificio = numero_edificio
+        self.__capacidad_asientos = capacidad_asientos
 
         #Property __nombre_aula
         @property

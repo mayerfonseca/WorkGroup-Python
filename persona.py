@@ -8,6 +8,7 @@ class Persona:
         self.__fecha_nacimiento = fecha_nacimiento
         self.__email = email
 
+    # Property nombre
     @property
     def nombre(self):
         return self.__nombre
@@ -97,7 +98,9 @@ class Persona:
     @email.deleter
     def email(self):
         del self.__email
-    @classmethod
+
+
+    #@classmethod
     def crear_persona(self,nombre, apellido, cedula, direccion, telefono, fecha_nacimiento, email):
         """Metodo para realizar una instanciación de Persona"""
         self.nombre = nombre
@@ -112,38 +115,38 @@ class Persona:
 class Profesor(Persona):
     def __init__(self, nombre, apellido, cedula, direccion, telefono, fecha_nacimiento, email, id_profesor):
         super(Profesor, self).__init__(nombre, apellido, cedula, direccion, telefono, fecha_nacimiento, email)
-        self.id_profesor = id_profesor
+        self.__id_profesor = id_profesor
 
         # Property id_profesor
         @property
         def id_profesor(self):
-            return self._id_profesor
+            return self.__id_profesor
 
         @email.setter
         def id_profesor(self, value):
-            self._id_profesor = value
+            self.__id_profesor = value
 
         @id_profesor.deleter
         def id_profesor(self):
-            del self._id_profesor
+            del self.__id_profesor
 
 class Estudiante(Persona):
     def __init__(self, nombre, apellido, cedula, direccion, telefono, fecha_nacimiento, email, id_estudiante):
         super(Estudiante, self).__init__(nombre, apellido, cedula, direccion, telefono, fecha_nacimiento, email)
-        self.id_estudiante = id_estudiante
+        self.__id_estudiante = id_estudiante
 
         # Property id_estudiante
         @property
         def id_estudiante(self):
-            return self._id_estudiante
+            return self.__id_estudiante
 
         @id_estudiante.setter
         def id_estudiante(self, value):
-            self._id_estudiante = value
+            self.__id_estudiante = value
 
         @id_estudiante.deleter
         def id_estudiante(self):
-            del self._id_estudiante
+            del self.__id_estudiante
 
 
 
