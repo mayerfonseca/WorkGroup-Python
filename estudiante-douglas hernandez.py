@@ -83,15 +83,15 @@ class personfactory:
             carnet = Profesor.id_profesor
             return carnet
 
-name = input("ingrese su nombre.\n-")
-lastname = input("ingrese su apellido.\n-")
-id = input("ingrese su cedula.\n-")
-cel = input("ingrese su telefono.\n-")
-direc = input("ingrese su direccion.\n-")
-f_n = input("ingrese su fecha de nacimiento.\n-")
-mail = input("ingrese su email.\n-")
-carnet = int(input("ingrese su id.\n-"))
-person = personfactory.crear_persona(carnet)
-Persona(name, lastname, id, cel, direc, f_n, mail)
-print(personfactory.crear_persona(carnet))
+# name = input("ingrese su nombre.\n-")
+# lastname = input("ingrese su apellido.\n-")
+# id = input("ingrese su cedula.\n-")
+# cel = input("ingrese su telefono.\n-")
+# direc = input("ingrese su direccion.\n-")
+# f_n = input("ingrese su fecha de nacimiento.\n-")
+# mail = input("ingrese su email.\n-")
+# carnet = int(input("ingrese su id.\n-"))
+# person = personfactory.crear_persona(carnet)
+# Persona(name, lastname, id, cel, direc, f_n, mail)
+# print(personfactory.crear_persona(carnet))
 
