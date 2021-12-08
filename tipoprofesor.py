@@ -3,27 +3,33 @@ class TipoProfesor:
         self._id_profesor = id_profesor
         self.__tipo = tipo
 
-        @property
-        def id_profesor(self):
-            return self.__id_profesor
+    #Property id_profesor
+    @property
+    def id_profesor(self):
+        return self.__id_profesor
 
-        @id_profesor.setter
-        def id_profesor(self, value):
-            self.__id_profesor = value
+    @id_profesor.setter
+    def id_profesor(self, value):
+        self.__id_profesor = value
 
-        @id_profesor.deleter
-        def id_profesor(self):
-            del self.__id_profesor
+    @id_profesor.deleter
+    def id_profesor(self):
+        del self.__id_profesor
 
-        @property
-        def tipo(self):
-            return self.__tipo
+    #Property tipo
+    @property
+    def tipo(self):
+        return self.__tipo
 
-        @tipo.setter
-        def tipo(self, value):
-            self.__tipo = value
+    @tipo.setter
+    def tipo(self, value):
+        self.__tipo = value
 
-        @tipo.deleter
-        def tipo(self):
-            del self.__tipo
+    @tipo.deleter
+    def tipo(self):
+        del self.__tipo
 
+    def definir_tipo(self, id_profesor, tipo):
+        """Metodo para realizar una instanciación para Definir Tipo de Profesor"""
+        self.id_profesor = id_profesor
+        self.tipo = tipo
