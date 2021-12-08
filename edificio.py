@@ -42,3 +42,16 @@ class Edificio:
         @cantidad_pisos.deleter
         def cantidad_pisos(self):
             del self.__cantidad_pisos
+
+        # Property cantidad_aulas
+        @property
+        def cantidad_aulas(self):
+            return self.__cantidad_aulas
+
+        @cantidad_aulas.setter
+        def cantidad_aulas(self, value):
+            self.__cantidad_aulas = value
+
+        @cantidad_aulas.deleter
+        def cantidad_aulas(self):
+            del self.__cantidad_aulas
