@@ -5,7 +5,7 @@ class Aula:
         self.__numero_edificio = numero_edificio
         self.__capacidad_asientos = capacidad_asientos
 
-        #Property __nombre_aula
+        #Property nombre_aula
         @property
         def nombre_aula(self):
             return self.__nombre_aula
@@ -18,7 +18,7 @@ class Aula:
         def nombre_aula(self):
             del self.__nombre_aula
 
-        # Property __numero_piso
+        # Property numero_piso
         @property
         def numero_piso(self):
             return self.__numero_piso
@@ -31,7 +31,7 @@ class Aula:
         def numero_piso(self):
             del self.__numero_piso
 
-        # Property __numero_edificio
+        # Property numero_edificio
         @property
         def numero_edificio(self):
             return self.__numero_edificio
@@ -44,7 +44,7 @@ class Aula:
         def numero_edificio(self):
             del self.__numero_edificio
 
-        # Property __capacidad_asientos
+        # Property capacidad_asientos
         @property
         def capacidad_asientos(self):
             return self.__capacidad_asientos
