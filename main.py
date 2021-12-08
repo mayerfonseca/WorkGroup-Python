@@ -5,7 +5,6 @@ import matricula
 import persona
 import programa
 import tipoprofesor
-import turno
 from persona import Persona
 
 # nombre_persona = input("Ingrese sus Nombres: ")
