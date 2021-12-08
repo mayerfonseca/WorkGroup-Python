@@ -6,6 +6,7 @@ import persona
 import programa
 import tipoprofesor
 from persona import Persona
+from persona import *
 
 # nombre_persona = input("Ingrese sus Nombres: ")
 # apellido_persona = input("Ingrese sus Apellidos: ")
@@ -22,9 +23,10 @@ direccion_persona = "Dirección"
 telefono_persona = "Telefono"
 fecha_nacimiento = "fecha de nacimiento"
 email_persona = "email"
+id_profesor = "256898"
 
-entidad = Persona
-entidad.crear_persona(nombre_persona, apellido_persona, cedula_persona, direccion_persona, telefono_persona, fecha_nacimiento, email_persona)
+entidad = Persona.factory("Profesor")
+entidad.crear(nombre_persona, apellido_persona, cedula_persona, direccion_persona, telefono_persona, fecha_nacimiento, email_persona, id_profesor)
 
 
 

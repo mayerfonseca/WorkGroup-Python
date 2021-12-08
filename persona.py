@@ -99,9 +99,7 @@ class Persona:
     def email(self):
         del self.__email
 
-
-    #@classmethod
-    def crear_persona(self,nombre, apellido, cedula, direccion, telefono, fecha_nacimiento, email):
+    def crear(self,nombre, apellido, cedula, direccion, telefono, fecha_nacimiento, email):
         """Metodo para realizar una instanciación de Persona"""
         self.nombre = nombre
         self.apellido = apellido
@@ -111,62 +109,82 @@ class Persona:
         self.fecha_nacimiento = fecha_nacimiento
         self.email = email
 
-#def factory(type):
-class Profesor(Persona):
-    def __init__(self, nombre, apellido, cedula, direccion, telefono, fecha_nacimiento, email, id_profesor):
-        super(Profesor, self).__init__(nombre, apellido, cedula, direccion, telefono, fecha_nacimiento, email)
-        self.__id_profesor = id_profesor
+    def factory(type):
+        class Profesor(Persona):
+            def __init__(self, nombre, apellido, cedula, direccion, telefono, fecha_nacimiento, email, id_profesor):
+                super(Profesor, self).__init__(nombre, apellido, cedula, direccion, telefono, fecha_nacimiento, email)
+                self.__id_profesor = id_profesor
 
-        # Property id_profesor
-        @property
-        def id_profesor(self):
-            return self.__id_profesor
+            # Property id_profesor
+            @property
+            def id_profesor(self):
+                return self.__id_profesor
 
-        @id_profesor.setter
-        def id_profesor(self, value):
-            self.__id_profesor = value
+            @id_profesor.setter
+            def id_profesor(self, value):
+                self.__id_profesor = value
 
-        @id_profesor.deleter
-        def id_profesor(self):
-            del self.__id_profesor
+            @id_profesor.deleter
+            def id_profesor(self):
+                del self.__id_profesor
 
-    # IMPLEMENTACIÓN DE DON JOSE METODO MOSTRAR
-    def display(self):
-        print("Profesor " + self.__id_profesor)
+            def crear(self,nombre, apellido, cedula, direccion, telefono, fecha_nacimiento, email, id_profesor):
+                """Metodo para realizar una instanciación de Persona"""
+                self.nombre = nombre
+                self.apellido = apellido
+                self.cedula = cedula
+                self.direccion = direccion
+                self.telefono = telefono
+                self.fecha_nacimiento = fecha_nacimiento
+                self.email = email
+                self.id_profesor = id_profesor
 
-class Estudiante(Persona):
-    def __init__(self, nombre, apellido, cedula, direccion, telefono, fecha_nacimiento, email, id_estudiante):
-        super(Estudiante, self).__init__(nombre, apellido, cedula, direccion, telefono, fecha_nacimiento, email)
-        self.__id_estudiante = id_estudiante
+            # IMPLEMENTACIÓN DE DON JOSE METODO MOSTRAR
+            def display(self):
+                print("Profesor " + self.__id_profesor)
 
-        # Property id_estudiante
-        @property
-        def id_estudiante(self):
-            return self.__id_estudiante
+        class Estudiante(Persona):
+            def __init__(self, nombre, apellido, cedula, direccion, telefono, fecha_nacimiento, email, id_estudiante):
+                super(Estudiante, self).__init__(nombre, apellido, cedula, direccion, telefono, fecha_nacimiento, email)
+                self.__id_estudiante = id_estudiante
 
-        @id_estudiante.setter
-        def id_estudiante(self, value):
-            self.__id_estudiante = value
+                # Property id_estudiante
+                @property
+                def id_estudiante(self):
+                    return self.__id_estudiante
 
-        @id_estudiante.deleter
-        def id_estudiante(self):
-            del self.__id_estudiante
+                @id_estudiante.setter
+                def id_estudiante(self, value):
+                    self.__id_estudiante = value
 
-    # IMPLEMENTACIÓN DE DON JOSE METODO MOSTRAR
-    def display(self):
-        print("Estudiante " + self.__id_estudiante)
+                @id_estudiante.deleter
+                def id_estudiante(self):
+                    del self.__id_estudiante
+
+            # IMPLEMENTACIÓN DE DON JOSE METODO MOSTRAR
+            def display(self):
+                print("Estudiante " + self.__id_estudiante)
+
+        if (type == "Profesor"):
+            return Profesor()
+        if (type == "Estudiante"):
+            return Estudiante()
 
 
-# IMPLEMENTACIÓN DE DON JOSE METODO MOSTRAR
-def mostrar(clase):
-    clase.display()
 
 
-##datos de prueba
-test1 = Profesor("Juan", "Galgo", "441-090182-0006G", "Matagalpa", "8633-1913", "1982-01-09", "montenegro.jose.m@gmail.com", "123")
-test2 = Estudiante("Mario", "Cruz", "441-090182-0006G", "Matagalpa", "8633-1913", "1982-01-09", "montenegro.jose.m@gmail.com", "456")
-
-mostrar(test1)
-mostrar(test2)
+    # # IMPLEMENTACIÓN DE DON JOSE METODO MOSTRAR
+    # def mostrar(clase):
+    #     clase.display()
+    #
+    # # def mostrar(clase):
+    # #     clase.display()
+    #
+    # ##datos de prueba
+    # test1 = Profesor("Juan", "Galgo", "441-090182-0006G", "Matagalpa", "8633-1913", "1982-01-09", "montenegro.jose.m@gmail.com", "123")
+    # test2 = Estudiante("Mario", "Cruz", "441-090182-0006G", "Matagalpa", "8633-1913", "1982-01-09", "montenegro.jose.m@gmail.com", "456")
+    #
+    # mostrar(test1)
+    # mostrar(test2)
 
 

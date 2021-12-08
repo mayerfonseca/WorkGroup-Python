@@ -32,15 +32,15 @@ class Curso:
         def creditos(self):
             del self.__creditos
 
-            # Property cant_hrs_semanales
-            @property
-            def cant_hrs_semanales(self):
-                return self.__cant_hrs_semanales
+        # Property cant_hrs_semanales
+        @property
+        def cant_hrs_semanales(self):
+            return self.__cant_hrs_semanales
 
-            @cant_hrs_semanales.setter
-            def cant_hrs_semanales(self, value):
-                self.__cant_hrs_semanales = value
+        @cant_hrs_semanales.setter
+        def cant_hrs_semanales(self, value):
+            self.__cant_hrs_semanales = value
 
-            @cant_hrs_semanales.deleter
-            def cant_hrs_semanales(self):
-                del self.__cant_hrs_semanales
+        @cant_hrs_semanales.deleter
+        def cant_hrs_semanales(self):
+            del self.__cant_hrs_semanales
