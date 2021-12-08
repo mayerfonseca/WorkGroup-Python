@@ -13,3 +13,7 @@ class Turno():
     @turno.deleter
     def turno(self, turno):
         del self.__turno
+
+    def definir_turno(self, turno):
+        """Define el tipo de contratación del profesor"""
+        self.__turno = turno
