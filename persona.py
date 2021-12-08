@@ -122,13 +122,17 @@ class Profesor(Persona):
         def id_profesor(self):
             return self.__id_profesor
 
-        @email.setter
+        @id_profesor.setter
         def id_profesor(self, value):
             self.__id_profesor = value
 
         @id_profesor.deleter
         def id_profesor(self):
             del self.__id_profesor
+
+    # IMPLEMENTACIÓN DE DON JOSE METODO MOSTRAR
+    def display(self):
+        print("Profesor " + self.__id_profesor)
 
 class Estudiante(Persona):
     def __init__(self, nombre, apellido, cedula, direccion, telefono, fecha_nacimiento, email, id_estudiante):
@@ -148,5 +152,21 @@ class Estudiante(Persona):
         def id_estudiante(self):
             del self.__id_estudiante
 
+    # IMPLEMENTACIÓN DE DON JOSE METODO MOSTRAR
+    def display(self):
+        print("Estudiante " + self.__id_estudiante)
+
+
+# IMPLEMENTACIÓN DE DON JOSE METODO MOSTRAR
+def mostrar(clase):
+    clase.display()
+
+
+##datos de prueba
+test1 = Profesor("Juan", "Galgo", "441-090182-0006G", "Matagalpa", "8633-1913", "1982-01-09", "montenegro.jose.m@gmail.com", "123")
+test2 = Estudiante("Mario", "Cruz", "441-090182-0006G", "Matagalpa", "8633-1913", "1982-01-09", "montenegro.jose.m@gmail.com", "456")
+
+mostrar(test1)
+mostrar(test2)
 
 
