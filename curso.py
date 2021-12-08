@@ -6,7 +6,7 @@ class Curso:
         self.__cant_hrs_semanales = cant_hrs_semanales
         self.__programa = programa
 
-        # Property __nombre_curso
+        # Property __nombre_cursoasdfasdf
         @property
         def nombre_curso(self):
             return self.__nombre_curso
