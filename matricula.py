@@ -26,3 +26,17 @@ class Matricula():
         @hora.deleter
         def hora(self):
             del self.__hora_matricula
+
+
+    def agregar(self, curso):
+        nombre_curso = input("Nombre del curso: ")
+        return  nombre_curso
+
+    def agregar(self, nota):
+        nota_curso = nota
+        return nota_curso
+
+    def total_vendido(self, precio):
+        precio_mat = precio
+        return precio_mat
+
