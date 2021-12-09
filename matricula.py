@@ -4,18 +4,6 @@ class Matricula():
         self.__hora_matricula = hora
 
         @property
-        def id(self):
-            return self.__id
-
-        @id.setter
-        def id(self, id):
-            self.__id = id
-
-        @id.deleter
-        def id(self):
-            del self.__id
-
-        @property
         def fecha(self):
             return self.__fecha_matricula
 
