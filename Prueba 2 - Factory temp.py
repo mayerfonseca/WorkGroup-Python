@@ -62,7 +62,5 @@ def saludar(type):
     type.saludo()
 
 
-
-
 hijo = Prueba.factory("Test2")
 saludar(hijo)
