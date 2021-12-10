@@ -28,11 +28,11 @@ class Matricula():
             del self.__hora_matricula
 
 
-    def agregar(self, curso):
+    def agregar_curso(self, curso):
         nombre_curso = input("Nombre del curso: ")
         return  nombre_curso
 
-    def agregar(self, nota):
+    def agregar_nota(self, nota):
         nota_curso = nota
         return nota_curso
 
